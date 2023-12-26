@@ -59,7 +59,7 @@ function validatePassword(pw) {
 
 function checkPW(pw) {
 
-    if (pw.length >= 10) {
+    if (pw.length >= 12) {
         getCheck(1).checked = true
     } else {
         getCheck(1).checked = false
