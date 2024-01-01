@@ -49,21 +49,21 @@
 					<h1 class="h4">Das sichere Passwort</h1>
 				</div>
 				<div class="card-body m-2">
-					<h2>Passw&ouml;rter</h2>
-					<p>Das gerheime Passwort soll sicherstellen, dass man eine vorgegebene Person ist. Hier wird vorausegsetzt, dass nur die berechtigte Person das Passwort kennt, um sich zu authentifizieren. Ein gibt sichere und unsichere Passw&ouml;rter.
+					<!-- <h2>Passwörter</h2> -->
+					<p>Das geheime Passwort soll sicherstellen, dass man eine vorgegebene Person ist. Hier wird vorausegsetzt, dass nur die berechtigte Person das Passwort kennt, um sich zu authentifizieren. Ein gibt sichere und unsichere Passwörter.
 					</p>
-					<p>Ein sicheres Passwort tr&auml;gt folgende Merkmale:</p>
+					<p>Ein sicheres Passwort trägt folgende Merkmale:</p>
 					<ul>
 						<li>mindestens 12 Zeichen, da das Passwort sonst leicht erraten werden kann,</li>
-						<li>das Passwort darf nicht in einem Wörterbuch stehen, da es sonst durch W&ouml;rterbuchlisten erraten wird, </li>
+						<li>das Passwort darf nicht in einem Wörterbuch stehen, da es sonst durch Wörterbuchlisten erraten wird, </li>
 						<li>das Passwort sollte Zahlen, Groß- und Kleinbuchstaben sowie Sonderzeichen enthalten, da so die möglichen kombinationen steigen und die Zeit, bis es herausgefunden wird, Exponentiell steigt und</li>
-						<li>das Passwort muss individuell und sollte einmalig sein sowie nicht in der Liste der beliebtesten Passw&ouml;rter auftauchen, da diese h&auml;ufig als erstes ausprobiert werden.</li>
+						<li>das Passwort muss einmalig sein sowie nicht in der Liste der beliebtesten Passwörter auftauchen, da diese häufig als erstes ausprobiert werden.</li>
 					</ul>
-					<p>Die oben gennanten Voraussetztungen sind Mindestvoraussetzungen. Das heißt, je mehr Zeichen, desto besser. Damit ein Passwort als sicher gilt, muss darauf geachtet werden, dass</p>
+					<p>Die oben gennanten Voraussetztungen sind Mindestvoraussetzungen. Das heißt, je mehr Zeichen, desto besser. Damit ein Passwort als sicher gilt, sollte zusätzlich darauf geachtet werden, dass</p>
 					<ul>
-						<li>das jeder Dienst ein anderes Passwort bekommt, da sonst bei einem Datenleak das häufig verwendete Passwort für alle ver&ouml;ffentlicht ist,</li>
-						<li>das Passwort nicht für alle Zug&auml;ngig gespeicher wird und</li>
-						<li>bei der Eingabe des Passwortes auf die Authenzit&auml;t der Webseite geachtet wird und auf die verschl&uuml;sselte &Uuml;bertragung (https).</li>
+						<li>das jeder Dienst ein anderes Passwort bekommt, da sonst bei einem Datenleak die Anmeldedaten für andere Dienste veröffentlicht werden,</li>
+						<li>das Passwort nicht für alle Zugängig gespeicher wird, z.B. an Schulcomputern und</li>
+						<li>bei der Eingabe des Passwortes auf die Authenzität der Webseite und auf die verschlüsselte Übertragung (https) geachtet wird.</li>
 					</ul>
 				</div>
 			</div>
@@ -72,18 +72,118 @@
 					<h1 class="h4">Zwei Faktor Authentifizierung</h1>
 				</div>
 				<div class="card-body m-2">
-					<h2>2FA</h2>
-					<p>Die 2FA ist eine der sicheresten Anmeldemethoden, da so neben einem Passwort, also dem Faktor &apos;Wissen&apos;, auch ein Faktor &apos;Besitz&apos; ben&ouml;tigt wird. Die Person ben&ouml;tigt beide Faktoren f&uuml;r eine erfolgreiche Anmeldung.</p>
-					<p>Beim zweiten Faktor, wird zwischen:</p>
+					<!-- <h2>2FA</h2> -->
+					<p>Die 2FA ist bedeutend sicherer als die herkömmliche Anmeldung mit nur einem Faktor (Passwort), da so neben einem Passwort, also dem Faktor 'Wissen', auch ein Faktor 'Besitz' benötigt wird. Die Person benötigt beide Faktoren für eine erfolgreiche Anmeldung.</p>
+					<p>Es gibt verschiedene Typen des zweiten Faktors, meist ist es aber einer der Folgenden:</p>
 					<ul>
-						<li>der zweite Faktor mittels SMS,</li>
-						<li>der zweite Faktor mittels E-Mail, </li>
-						<li>der zweite Faktor mittels Hardwaretokens, </li>
-						<li>der zweite Faktor mittels Authenticatorapps und</li>
-						<li>der zweite Faktor mittels Biometri, hier aber nur der Fingerabdruck und ein 3D-Geschcihtsscan (z.B. Face-ID und &apos;Windows Hello&apos;)</li>
+						<li>SMS</li>
+						<li>E-Mail</li>
+						<li>Hardwaretokens</li>
+						<li>Authenticatorapps</li>
+						<li>Biometri, hier aber nur der Fingerabdruck und ein 3D-Geschcihtsscan (z.B. Face-ID und 'Windows Hello')</li>
 					</ul>
-					<p>Mittlerweile gelten nur noch die letzten drei Methoden, als sicherere zweiter Faktoren, da es möglich ist E-Mail und SMS abzufangen. Bei einer Sachgemäßen Benutzung ist das Abgreifen der Anmeldedaten nahezu ausgeschlossen.</p>
-					<p>Aktuell gibt es eine neue möglichkeit der Anmeldung, die noch sicherere ist, mit dem Namen &apos;Passkey&apos;. Der Große vorteil von Passkeys ist, dass kein Passwort eingegeben werden muss und somit nichts abgefangen werden kann. Die Anmeldung wird mithilfe von biometrischen Daten authorisiert.</p>
+					<p>Mittlerweile gelten nur noch die letzten drei Methoden, als sicherere zweiter Faktoren, da es möglich ist SMS abzufangen. Passwörter können meist per E-Mail zurückgesetzt werden, weshalb bei Vollzugriff auf den E-Mail Account bereits beide Faktoren erfüllt sind. Bei einer sachgemäßen Benutzung der zwei Faktor Authentifizierung ist das Abgreifen der Anmeldedaten nahezu ausgeschlossen.</p>
+					<!-- <p>Aktuell gibt es eine neue möglichkeit der Anmeldung, die noch sicherere ist, mit dem Namen &apos;Passkey&apos;. Der Große vorteil von Passkeys ist, dass kein Passwort eingegeben werden muss und somit nichts abgefangen werden kann. Die Anmeldung wird mithilfe von biometrischen Daten authorisiert.</p> --> <!-- würde ich rauslassen - hat nix mit dem eigentlichen Thema zutun --> 
+					<p class="mt-4">Im folgenden erklären wir euch die Authenticatorapps genauer, da sie am weit verbreitetsten sind.</p>
+					<div class="row row-cols-2">
+						<div class="col">
+							<div class="card mb-3">
+							<div class="row g-0">
+							  <div class="col-md-4">
+								<img src="..." class="img-fluid rounded-start" alt="...">
+							  </div>
+							  <div class="col-md-8">
+								<div class="card-body">
+								  <h5 class="card-title">Card title</h5>
+								  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<div class="col">
+							<div class="card mb-3">
+							<div class="row g-0">
+							  <div class="col-md-4">
+								<img src="..." class="img-fluid rounded-start" alt="...">
+							  </div>
+							  <div class="col-md-8">
+								<div class="card-body">
+								  <h5 class="card-title">Card title</h5>
+								  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<div class="col">
+							<div class="card mb-3">
+							<div class="row g-0">
+							  <div class="col-md-4">
+								<img src="..." class="img-fluid rounded-start" alt="...">
+							  </div>
+							  <div class="col-md-8">
+								<div class="card-body">
+								  <h5 class="card-title">Card title</h5>
+								  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<div class="col">
+							<div class="card mb-3">
+							<div class="row g-0">
+							  <div class="col-md-4">
+								<img src="..." class="img-fluid rounded-start" alt="...">
+							  </div>
+							  <div class="col-md-8">
+								<div class="card-body">
+								  <h5 class="card-title">Card title</h5>
+								  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<div class="col">
+							<div class="card mb-3">
+							<div class="row g-0">
+							  <div class="col-md-4">
+								<img src="..." class="img-fluid rounded-start" alt="...">
+							  </div>
+							  <div class="col-md-8">
+								<div class="card-body">
+								  <h5 class="card-title">Card title</h5>
+								  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<div class="col">
+							<div class="card mb-3">
+							<div class="row g-0">
+							  <div class="col-md-4">
+								<img src="..." class="img-fluid rounded-start" alt="...">
+							  </div>
+							  <div class="col-md-8">
+								<div class="card-body">
+								  <h5 class="card-title">Card title</h5>
+								  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>
