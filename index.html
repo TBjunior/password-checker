@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Password Sicherheit ist Richtig und Wichtig</title>
+		<script src="scripts/script.js"></script>
+		<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+	</head>
+	<body data-bs-theme="dark">
+		<div style="margin-left: 10%; margin-right: 10%;">
+			<div class="card m-2">
+				<div class="card-body">
+					<h1 class="h1">Projekt Info</h1>
+				</div>
+			</div>
+			<div class="card m-2 my-4">
+				<div class="m-3">
+					<h1 class="h4">Passwordüberprüfer</h1>
+					<form action="">
+						<label class="form-label m-2" for="pwinput">Hier kannst du die Sicherheit deiner Passwörter überprüfen</label>
+						<input type="password" id="pwinput" class="form-control" placeholder="s!ch3res P4$$w0rd" onkeyup="checkPW(this.value)">
+					</form>
+					<div class="progress m-2" role="progressbar" aria-label="Sicherheitsbalken" style="height: 7px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+						<div class="progress-bar bg-danger" id="bar" style="width: 2%;"></div>
+					</div>
+					<table class="table">
+						<tbody>
+							<tr>
+								<td><input type="checkbox" disabled class="form-check-input" id="check1"></td>
+								<td>Ein gutes Password sollte mindestens 12 Zeichen lang sein.</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" disabled class="form-check-input" id="check2"></td>
+								<td>Passwörter, welche einfach nur W&ouml;rter aus dem W&ouml;rterbuch sind, sollten vermieden werden.</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" disabled class="form-check-input" id="check3"></td>
+								<td>Ein Password sollte mindestens je eine Zahl, ein Sonderzeichen und Groß- und Kleinbuchstaben enthalten.</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" disabled class="form-check-input" id="check4"></td>
+								<td>Passw&ouml;rter, welche von vielen benutzt werden, sind für Angreifer am leichtesten zu knacken.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="card m-2">
+				<div class="card-header">
+					<h1 class="h4">Das sichere Passwort</h1>
+				</div>
+				<div class="card-body m-2">
+					<!-- <h2>Passwörter</h2> -->
+					<p>Das geheime Passwort soll sicherstellen, dass man eine vorgegebene Person ist. Hier wird vorausegsetzt, dass nur die berechtigte Person das Passwort kennt, um sich zu authentifizieren. Ein gibt sichere und unsichere Passwörter.
+					</p>
+					<p>Ein sicheres Passwort trägt folgende Merkmale:</p>
+					<ul>
+						<li>mindestens 12 Zeichen, da das Passwort sonst leicht erraten werden kann,</li>
+						<li>das Passwort darf nicht in einem Wörterbuch stehen, da es sonst durch Wörterbuchlisten erraten wird, </li>
+						<li>das Passwort sollte Zahlen, Groß- und Kleinbuchstaben sowie Sonderzeichen enthalten, da so die möglichen kombinationen steigen und die Zeit, bis es herausgefunden wird, Exponentiell steigt und</li>
+						<li>das Passwort muss einmalig sein sowie nicht in der Liste der beliebtesten Passwörter auftauchen, da diese häufig als erstes ausprobiert werden.</li>
+					</ul>
+					<p>Die oben gennanten Voraussetztungen sind Mindestvoraussetzungen. Das heißt, je mehr Zeichen, desto besser. Damit ein Passwort als sicher gilt, sollte zusätzlich darauf geachtet werden, dass</p>
+					<ul>
+						<li>das jeder Dienst ein anderes Passwort bekommt, da sonst bei einem Datenleak die Anmeldedaten für andere Dienste veröffentlicht werden,</li>
+						<li>das Passwort nicht für alle Zugängig gespeicher wird, z.B. an Schulcomputern und</li>
+						<li>bei der Eingabe des Passwortes auf die Authenzität der Webseite und auf die verschlüsselte Übertragung (https) geachtet wird.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="card m-2">
+				<div class="card-header">
+					<h1 class="h4">Zwei Faktor Authentifizierung</h1>
+				</div>
+				<div class="card-body m-2">
+					<!-- <h2>2FA</h2> -->
+					<p>Die Anmeldung mit einen zweiten Faktor (2FA) ist bedeutend sicherer als die herkömmliche Anmeldung mit nur einem Faktor (Passwort), da so neben einem Passwort, also dem Faktor 'Wissen', auch ein Faktor 'Besitz' benötigt wird. Die Person benötigt beide Faktoren für eine erfolgreiche Anmeldung.</p>
+					<p>Es gibt verschiedene Typen des zweiten Faktors, meist ist es aber einer der Folgenden:</p>
+					<ul>
+						<li>SMS</li>
+						<li>E-Mail</li>
+						<li>Hardwaretokens</li>
+						<li>Authenticatorapps</li>
+						<li>Biometri, hier aber nur der Fingerabdruck und ein 3D-Geschcihtsscan (z.B. Face-ID und 'Windows Hello')</li>
+					</ul>
+					<p>Mittlerweile gelten nur noch die letzten drei Methoden, als sicherere zweiter Faktoren, da es möglich ist SMS abzufangen. Passwörter können meist per E-Mail zurückgesetzt werden, weshalb bei Vollzugriff auf den E-Mail Account bereits beide Faktoren erfüllt sind. Bei einer sachgemäßen Benutzung der zwei Faktor Authentifizierung ist das Abgreifen der Anmeldedaten nahezu ausgeschlossen.</p>
+					<!-- <p>Aktuell gibt es eine neue möglichkeit der Anmeldung, die noch sicherere ist, mit dem Namen &apos;Passkey&apos;. Der Große vorteil von Passkeys ist, dass kein Passwort eingegeben werden muss und somit nichts abgefangen werden kann. Die Anmeldung wird mithilfe von biometrischen Daten authorisiert.</p> --> <!-- würde ich rauslassen - hat nix mit dem eigentlichen Thema zutun --> 
+					<p class="mt-4">Im folgenden erklären wir euch die Authenticatorapps genauer, da sie am weit verbreitetsten sind.</p>
+					<div class="row row-cols-2">
+						<div class="col">
+							<div class="card mb-3">
+							<div class="row g-0">
+							  <div class="col-md-8">
+								<img src="/images/authenticators-google-one-time-password-fetch.png" class="img-fluid rounded-start" alt="...">
+							  </div>
+							  <div class="col-md-8">
+								<div class="card-body">
+								  <h5 class="card-title">Aufbau einer Authenticatorapp</h5>
+								  <p class="card-text">In einer Authenticatorapp findet man Zahlen, die das zeitlichbegrenzte Passwort dastellen und obendrüber den damit verknüpften Dienst.</p>
+								  <p class="card-text"><small class="text-body-secondary">Bildquelle: http://tinyurl.com/yttsbnpx</small></p>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<!-- <div class="col">
+							<div class="card mb-3">
+							<div class="row g-0"
+							  <div class="col-md-4">
+								<img src="..." class="img-fluid rounded-start" alt="...">
+							  </div>
+							  <div class="col-md-8">
+								<div class="card-body">
+								  <h5 class="card-title">Card title</h5>
+								  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<div class="col">
+							<div class="card mb-3">
+							<div class="row g-0">
+							  <div class="col-md-4">
+								<img src="..." class="img-fluid rounded-start" alt="...">
+							  </div>
+							  <div class="col-md-8">
+								<div class="card-body">
+								  <h5 class="card-title">Card title</h5>
+								  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<div class="col">
+							<div class="card mb-3">
+							<div class="row g-0">
+							  <div class="col-md-4">
+								<img src="..." class="img-fluid rounded-start" alt="...">
+							  </div>
+							  <div class="col-md-8">
+								<div class="card-body">
+								  <h5 class="card-title">Card title</h5>
+								  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						</div> -->
+					</div>
+					<div>
+						<h1 class="h5">So funktionieren Authenticator-Apps</h1>
+						<p>Die Authenticator-App generariert einen Schlüssel, der nur dem Endgerät des Nutzers und dem Server, der Dienstes, bekannt ist. Bei der Verwendung, wird der Schlüssel auf der Grundlage der Zeit generiert, wesewegen der Schlüssel auf dem Server, bei dem Dienst, wo man sich Anmeldet und auf dem eigenen Gerät gleich ist. Bei Schlüssel laufen Synkron, aber unabhängig von ein ander.</p>
+						<p>Kommt es dann zur Anmeldung überprüft der Dienst das eingegeben Passwort von der Authenticator-App mit dem selbstgenerierten Passwort. Erst, wenn beide Passwörter gleich sind, kommt es zur Anmeldung.</p>
+					</div>
+					<div class="col">
+						<div class="card mb-3">
+						<div class="row g-0">
+						  <div class="col-md-4">
+							<img src="/images/ratgeber-2fa-05.png" class="img-fluid rounded-start" alt="...">
+						  </div>
+						  <div class="col-md-8">
+							<div class="card-body">
+							  <h5 class="card-title">Funktionsschema der zwei Faktor Authentifizierung</h5>
+							  <p class="card-text">Zuerst meldet sich der Nutzer beim Server mit seinen Anmeldedaten an. Dieser überprüft diese und fordert, wenn die Anmeldedaten richtig sind, den Nutzer auf, sich mit dem Zeitpasswort von seinem Handy anzumelden. Erst, wenn beide Angaben richtig sind, kommt es zur Anmeldung.</p>
+							  <p class="card-text"><small class="text-body-secondary">Bildquelle: http://tinyurl.com/yrmselje</small></p>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<div>
+						<h1 class="h5">Die Einrichtung ist ganz leicht</h1>
+						<p>Zuerst bracht man eine Authenticator-App. Häufig wird die App von Google oder Microsoft verwendet. Dadurch, dass die Schlüsselgenerierung Lokal passiert, solange keine Sicherheitsminimierende Syncronisation eingeschalten wurde, kriegen Microsoft und Google nichts von den Schlüssl mit. Der Markt an solchen Apps ist risig. Hier muss aber aufgepasst werden auf die Intigrität der App, da hier sehr sensible Daten verwendet werden.</p>
+						<p>Desweiteren braucht man einen Dienst, der die Anwendung des zweiten Faktors erlaubt. Wenn man einen Dienst hat, bekommt man einen QR-Code, denn man mit der Authenticator-App einscant schon sind die Codes syncronisiert oder alternativ bekommt man eine lange Zahlenfolge, die man in der App eingibt und so auf das selbe Ergebnis kommt.</p>
+					</div>
+					<div class="col">
+						<div class="card mb-3">
+						<div class="row g-0">
+						  <div class="col-md-4">
+							<img src="/images/2fa-practical-guide-app-registration-DE.png" class="img-fluid rounded-start" alt="/images/2fa-practical-guide-app-registration-DE.png">
+						  </div>
+						  <div class="col-md-8">
+							<div class="card-body">
+							  <h5 class="card-title">Aussehen der Einrichtung mit QR-Code</h5>
+							  <p class="card-text">Hier wird die Einrichtung von einer Authenticator-App gezeigt. Entweder wird der QR-Code (hier links abgebildet) eingescant oder man gibt die lange Zahlenabfolge in der Authenticator-App ein. Dadurch wird das Passwort bei der App mit dem Dienst syncronisiert.</p>
+							  <p class="card-text"><small class="text-body-secondary">Bildquelle: http://tinyurl.com/ymg6qu2b</small></p>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<div>
+						<h1 class="h5">So läuft die Anmeldung ab</h1>
+						<p>Zuerst meldet man sich mit seiner E-Mail Adresse oder seinen Benutzername und seinem Passwort an. Dannach überprüft der Dienst, bei den man sich Anmeldet, ob die Anmeldedaten stimmen. Wenn die Daten stimmen, wird man aufgefordert das Zeitpasswort aus der Authenticator-App einzugeben. Wenn das Passwort auch übereinstimmt, wird man erst Angemeldet.</p>
+						<p>Durch diese Schritte ist eine Anmeldung sehr sicher und nicht von dritten Ausnutzbar.</p>
+					</div>
+					<div>
+						<h1 class="h5">Wie sicher und unkomplieziert ist die Nutzung?</h1>
+						<p>Die Nutzung ist sehr sicher, da wie oben schon erwähnt ein zweiter Faktor des Besitzes zu den Faktor des Wissens abgefragt wird. Durch die Nutzung des zweiten Faktors wird das Konto bei der Sachgemäßenbenutzung unknackbar. Aber Achtung: Die Verwendung der zwei Faktor Authentifizierung gleicht kein schlechtes oder unsicheres Passwort aus! Es erschwert jedoch sehr stark den zugriff.</p>
+						<p>Die Nutzung ist unkonpliziert und einfach, da schon das Handy und eine nötige Authenticator-App ausreichen, um sich sicher mittles dem zweiten Faktor anzumelden. Die Zeit mit der Anmeldung wird nur um ein paar Sekunden herausgezögert, da das Zeitpasswort in der Regel nur aus 6 Ziffern besteht.</p>
+					</div>
+					<div>
+						<h1 class="h5">Wie sieht es beim Ausfall des Handys aus?</h1>
+						<p>Für diesen Fall gibt es vom Dienst bei der Einrichtung 10 Einmalpasswörter, die sehr lang sind und nur einmal verwendet werden können. Diese Passwörter werden dann wie das Zeitpasswort eingegeben und sind daraufhin ungültig. Sollte man aber das Handy verlieren und nicht mehr die Einmalpasswörter besitzen, weil man sie verloren hat, besteht in der Regel keine Möglichkeit mehr der Anmeldung. Die Dienst können den zweiten Faktor aus sicherheitsgründen nicht mehr zurücksetzen. Sollte ein Dienst das Trozdem anbieten, muss ein sehr umfangreicher Nachweis erbracht werden, dass man der Besitzer ist.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
