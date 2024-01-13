@@ -73,7 +73,7 @@
 				</div>
 				<div class="card-body m-2">
 					<!-- <h2>2FA</h2> -->
-					<p>Die 2FA ist bedeutend sicherer als die herkömmliche Anmeldung mit nur einem Faktor (Passwort), da so neben einem Passwort, also dem Faktor 'Wissen', auch ein Faktor 'Besitz' benötigt wird. Die Person benötigt beide Faktoren für eine erfolgreiche Anmeldung.</p>
+					<p>Die Anmeldung mit einen zweiten Faktor (2FA) ist bedeutend sicherer als die herkömmliche Anmeldung mit nur einem Faktor (Passwort), da so neben einem Passwort, also dem Faktor 'Wissen', auch ein Faktor 'Besitz' benötigt wird. Die Person benötigt beide Faktoren für eine erfolgreiche Anmeldung.</p>
 					<p>Es gibt verschiedene Typen des zweiten Faktors, meist ist es aber einer der Folgenden:</p>
 					<ul>
 						<li>SMS</li>
@@ -89,6 +89,22 @@
 						<div class="col">
 							<div class="card mb-3">
 							<div class="row g-0">
+							  <div class="col-md-8">
+								<img src="/images/authenticators-google-one-time-password-fetch.png" class="img-fluid rounded-start" alt="...">
+							  </div>
+							  <div class="col-md-8">
+								<div class="card-body">
+								  <h5 class="card-title">Aufbau einer Authenticatorapp</h5>
+								  <p class="card-text">In einer Authenticatorapp findet man Zahlen, die das zeitlichbegrenzte Passwort dastellen und obendrüber den damit verknüpften Dienst.</p>
+								  <p class="card-text"><small class="text-body-secondary">Bildquelle: http://tinyurl.com/yttsbnpx</small></p>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<!-- <div class="col">
+							<div class="card mb-3">
+							<div class="row g-0"
 							  <div class="col-md-4">
 								<img src="..." class="img-fluid rounded-start" alt="...">
 							  </div>
@@ -133,57 +149,64 @@
 							  </div>
 							</div>
 						  </div>
-						</div>
-						<div class="col">
-							<div class="card mb-3">
-							<div class="row g-0">
-							  <div class="col-md-4">
-								<img src="..." class="img-fluid rounded-start" alt="...">
-							  </div>
-							  <div class="col-md-8">
-								<div class="card-body">
-								  <h5 class="card-title">Card title</h5>
-								  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-								  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-								</div>
-							  </div>
-							</div>
-						  </div>
-						</div>
-						<div class="col">
-							<div class="card mb-3">
-							<div class="row g-0">
-							  <div class="col-md-4">
-								<img src="..." class="img-fluid rounded-start" alt="...">
-							  </div>
-							  <div class="col-md-8">
-								<div class="card-body">
-								  <h5 class="card-title">Card title</h5>
-								  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-								  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-								</div>
-							  </div>
-							</div>
-						  </div>
-						</div>
-						<div class="col">
-							<div class="card mb-3">
-							<div class="row g-0">
-							  <div class="col-md-4">
-								<img src="..." class="img-fluid rounded-start" alt="...">
-							  </div>
-							  <div class="col-md-8">
-								<div class="card-body">
-								  <h5 class="card-title">Card title</h5>
-								  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-								  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-								</div>
-							  </div>
-							</div>
-						  </div>
-						</div>
+						</div> -->
 					</div>
-
+					<div>
+						<h1 class="h5">So funktionieren Authenticator-Apps</h1>
+						<p>Die Authenticator-App generariert einen Schlüssel, der nur dem Endgerät des Nutzers und dem Server, der Dienstes, bekannt ist. Bei der Verwendung, wird der Schlüssel auf der Grundlage der Zeit generiert, wesewegen der Schlüssel auf dem Server, bei dem Dienst, wo man sich Anmeldet und auf dem eigenen Gerät gleich ist. Bei Schlüssel laufen Synkron, aber unabhängig von ein ander.</p>
+						<p>Kommt es dann zur Anmeldung überprüft der Dienst das eingegeben Passwort von der Authenticator-App mit dem selbstgenerierten Passwort. Erst, wenn beide Passwörter gleich sind, kommt es zur Anmeldung.</p>
+					</div>
+					<div class="col">
+						<div class="card mb-3">
+						<div class="row g-0">
+						  <div class="col-md-4">
+							<img src="/images/ratgeber-2fa-05.png" class="img-fluid rounded-start" alt="...">
+						  </div>
+						  <div class="col-md-8">
+							<div class="card-body">
+							  <h5 class="card-title">Funktionsschema der zwei Faktor Authentifizierung</h5>
+							  <p class="card-text">Zuerst meldet sich der Nutzer beim Server mit seinen Anmeldedaten an. Dieser überprüft diese und fordert, wenn die Anmeldedaten richtig sind, den Nutzer auf, sich mit dem Zeitpasswort von seinem Handy anzumelden. Erst, wenn beide Angaben richtig sind, kommt es zur Anmeldung.</p>
+							  <p class="card-text"><small class="text-body-secondary">Bildquelle: http://tinyurl.com/yrmselje</small></p>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<div>
+						<h1 class="h5">Die Einrichtung ist ganz leicht</h1>
+						<p>Zuerst bracht man eine Authenticator-App. Häufig wird die App von Google oder Microsoft verwendet. Dadurch, dass die Schlüsselgenerierung Lokal passiert, solange keine Sicherheitsminimierende Syncronisation eingeschalten wurde, kriegen Microsoft und Google nichts von den Schlüssl mit. Der Markt an solchen Apps ist risig. Hier muss aber aufgepasst werden auf die Intigrität der App, da hier sehr sensible Daten verwendet werden.</p>
+						<p>Desweiteren braucht man einen Dienst, der die Anwendung des zweiten Faktors erlaubt. Wenn man einen Dienst hat, bekommt man einen QR-Code, denn man mit der Authenticator-App einscant schon sind die Codes syncronisiert oder alternativ bekommt man eine lange Zahlenfolge, die man in der App eingibt und so auf das selbe Ergebnis kommt.</p>
+					</div>
+					<div class="col">
+						<div class="card mb-3">
+						<div class="row g-0">
+						  <div class="col-md-4">
+							<img src="/images/2fa-practical-guide-app-registration-DE.png" class="img-fluid rounded-start" alt="/images/2fa-practical-guide-app-registration-DE.png">
+						  </div>
+						  <div class="col-md-8">
+							<div class="card-body">
+							  <h5 class="card-title">Aussehen der Einrichtung mit QR-Code</h5>
+							  <p class="card-text">Hier wird die Einrichtung von einer Authenticator-App gezeigt. Entweder wird der QR-Code (hier links abgebildet) eingescant oder man gibt die lange Zahlenabfolge in der Authenticator-App ein. Dadurch wird das Passwort bei der App mit dem Dienst syncronisiert.</p>
+							  <p class="card-text"><small class="text-body-secondary">Bildquelle: http://tinyurl.com/ymg6qu2b</small></p>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<div>
+						<h1 class="h5">So läuft die Anmeldung ab</h1>
+						<p>Zuerst meldet man sich mit seiner E-Mail Adresse oder seinen Benutzername und seinem Passwort an. Dannach überprüft der Dienst, bei den man sich Anmeldet, ob die Anmeldedaten stimmen. Wenn die Daten stimmen, wird man aufgefordert das Zeitpasswort aus der Authenticator-App einzugeben. Wenn das Passwort auch übereinstimmt, wird man erst Angemeldet.</p>
+						<p>Durch diese Schritte ist eine Anmeldung sehr sicher und nicht von dritten Ausnutzbar.</p>
+					</div>
+					<div>
+						<h1 class="h5">Wie sicher und unkomplieziert ist die Nutzung?</h1>
+						<p>Die Nutzung ist sehr sicher, da wie oben schon erwähnt ein zweiter Faktor des Besitzes zu den Faktor des Wissens abgefragt wird. Durch die Nutzung des zweiten Faktors wird das Konto bei der Sachgemäßenbenutzung unknackbar. Aber Achtung: Die Verwendung der zwei Faktor Authentifizierung gleicht kein schlechtes oder unsicheres Passwort aus! Es erschwert jedoch sehr stark den zugriff.</p>
+						<p>Die Nutzung ist unkonpliziert und einfach, da schon das Handy und eine nötige Authenticator-App ausreichen, um sich sicher mittles dem zweiten Faktor anzumelden. Die Zeit mit der Anmeldung wird nur um ein paar Sekunden herausgezögert, da das Zeitpasswort in der Regel nur aus 6 Ziffern besteht.</p>
+					</div>
+					<div>
+						<h1 class="h5">Wie sieht es beim Ausfall des Handys aus?</h1>
+						<p>Für diesen Fall gibt es vom Dienst bei der Einrichtung 10 Einmalpasswörter, die sehr lang sind und nur einmal verwendet werden können. Diese Passwörter werden dann wie das Zeitpasswort eingegeben und sind daraufhin ungültig. Sollte man aber das Handy verlieren und nicht mehr die Einmalpasswörter besitzen, weil man sie verloren hat, besteht in der Regel keine Möglichkeit mehr der Anmeldung. Die Dienst können den zweiten Faktor aus sicherheitsgründen nicht mehr zurücksetzen. Sollte ein Dienst das Trozdem anbieten, muss ein sehr umfangreicher Nachweis erbracht werden, dass man der Besitzer ist.</p>
+					</div>
 				</div>
 			</div>
 		</div>
