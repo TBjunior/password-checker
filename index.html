@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="de">
 	<head>
-		<title>Password Sicherheit ist Richtig und Wichtig</title>
+		<title>Richtige Online Authentifizierung</title>
 		<script src="scripts/script.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+		<link rel="icon" href="./images/favicon.jpg" type="image/x-icon">
 	</head>
 	<body data-bs-theme="dark">
 		<div style="margin-left: 10%; margin-right: 10%;">
@@ -15,7 +16,7 @@
 			</div>
 			<div class="card m-2 mt-4">
 				<div class="card-header">
-					<h1 class="h4">Das sichere Passwort</h1>
+					<h1 class="h4 text-center">Das sichere Passwort</h1>
 				</div>
 				<div class="card-body m-2">
 					<!-- <h2>Passwörter</h2> -->
@@ -38,9 +39,9 @@
 			</div>
 			<div class="card m-2 mb-4">
 				<div class="m-3">
-					<h1 class="h4">Passwordüberprüfer</h1>
+					<h1 class="h4 text-center">Passwordüberprüfer</h1>
 					<form action="">
-						<label class="form-label m-2" for="pwinput">Hier kannst du die Sicherheit deiner Passwörter überprüfen</label>
+						<label class="form-label m-2" for="pwinput">Hier kannst du die Sicherheit deiner Passwörter überprüfen. Natürlich werden keine Daten gespeichert, die Verarbeitung erfolgt lokal auf deinem Gerät.</label>
 						<input type="password" id="pwinput" class="form-control" placeholder="s!ch3res P4$$w0rd" onkeyup="checkPW(this.value)">
 					</form>
 					<div class="progress m-2" role="progressbar" aria-label="Sicherheitsbalken" style="height: 7px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
@@ -70,7 +71,7 @@
 			</div>
 			<div class="card m-2">
 				<div class="card-header">
-					<h1 class="h4">Zwei Faktor Authentifizierung</h1>
+					<h1 class="h4 text-center">Zwei Faktor Authentifizierung</h1>
 				</div>
 				<div class="card-body m-2">
 					<p>Die Anmeldung mit einem zweiten Faktor (2FA) ist bedeutend sicherer als die herkömmliche Anmeldung mit nur einem Faktor (Passwort), da so neben einem Passwort, also dem Faktor 'Wissen', auch ein Faktor 'Besitz' benötigt wird. Die Person benötigt beide Faktoren für eine erfolgreiche Anmeldung.</p>
@@ -94,10 +95,11 @@
 							</h2>
 							<div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
 								<div class="accordion-body">
-									<p>Die Authenticator-App generiert einen Schlüssel, der nur dem Endgerät des Nutzers und dem Server, der Dienstes, bekannt ist. Bei der Verwendung, wird der Schlüssel auf der Grundlage der Zeit generiert, weswegen der Schlüssel auf dem Server, bei dem Dienst, wo man sich Anmeldet und auf dem eigenen Gerät gleich ist. Bei Schlüssel laufen Synchron, aber unabhängig voneinander.</p>
-									<p>Kommt es dann zur Anmeldung überprüft der Dienst das eingegebene Passwort von der Authenticator-App mit dem selbst generierten Passwort. Erst, wenn beide Passwörter gleich sind, kommt es zur Anmeldung.</p>							</div>
+									<p>Die Authenticator-App generiert einen Schlüssel, der nur dem Endgerät des Nutzers und dem Server, des Dienstes, bekannt ist. Bei der Verwendung, wird der Schlüssel auf der Grundlage der Zeit generiert, weswegen der Schlüssel auf dem Server, bei dem Dienst, wo man sich Anmeldet und auf dem eigenen Gerät gleich ist. Beide Schlüssel laufen Synchron, aber unabhängig voneinander.</p>
+									<p>Kommt es dann zur Anmeldung überprüft der Dienst den eingegebenen Schlüssel von der Authenticator-App mit dem selbst generierten Schlüssel. Erst, wenn beide Schlüssel gleich sind, kommt es zur Anmeldung.</p>							
 								</div>
 							</div>
+						</div>
 						<div class="accordion-item">
 							<h2 class="accordion-header">
 								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -115,6 +117,7 @@
 												<div class="card-body">
 													<!-- <h5 class="card-title">Funktionsschema der zwei Faktor Authentifizierung</h5> -->
 													<p class="card-text">Zuerst meldet sich der Nutzer beim Server mit seinen Anmeldedaten an. Dieser überprüft diese und fordert, wenn die Anmeldedaten richtig sind, den Nutzer auf, sich mit dem Zeitpasswort von seinem Handy anzumelden. Erst, wenn beide Angaben richtig sind, kommt es zur Anmeldung.</p>
+													<p>Durch diese Schritte ist eine Anmeldung sehr sicher und nicht von dritten Ausnutzbar.</p>
 													<p class="card-text"><small class="text-body-secondary">Bildquelle: http://tinyurl.com/yrmselje</small></p>
 												</div>
 											</div>
@@ -148,7 +151,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="accordion-item">
+						<!-- <div class="accordion-item">
 							<h2 class="accordion-header">
 								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
 									So läuft die Anmeldung ab
@@ -160,7 +163,7 @@
 									<p>Durch diese Schritte ist eine Anmeldung sehr sicher und nicht von dritten Ausnutzbar.</p>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<div class="accordion-item">
 							<h2 class="accordion-header">
 							  	<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -196,13 +199,13 @@
 						<div class="accordion-item">
 							<h2 class="accordion-header">
 							  	<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSeven">
-									Wie sicher und unkomplieziert ist die Nutzung?
+									Wie sicher und unkompliziert ist die Nutzung?
 								</button>
 							</h2>
 							<div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 								<div class="accordion-body">
-									<p>Die Nutzung ist sehr sicher, da wie oben schon erwähnt ein zweiter Faktor des Besitzes zu den Faktor des Wissens abgefragt wird. Durch die Nutzung des zweiten Faktors wird das Konto bei der Sachgemäßenbenutzung unknackbar. Aber Achtung: Die Verwendung der zwei Faktor Authentifizierung gleicht kein schlechtes oder unsicheres Passwort aus! Es erschwert jedoch sehr stark den zugriff.</p>
-									<p>Die Nutzung ist unkonpliziert und einfach, da schon das Handy und eine nötige Authenticator-App ausreichen, um sich sicher mittles dem zweiten Faktor anzumelden. Die Zeit mit der Anmeldung wird nur um ein paar Sekunden herausgezögert, da das Zeitpasswort in der Regel nur aus 6 Ziffern besteht.</p>			
+									<p>Die Nutzung ist sehr sicher, da wie oben schon erwähnt ein zweiter Faktor des Besitzes zu den Faktor des Wissens abgefragt wird. Durch die Nutzung des zweiten Faktors wird das Konto bei der Sachgemäßenbenutzung unknackbar. Aber Achtung: <b>Die Verwendung der zwei Faktor Authentifizierung gleicht kein schlechtes oder unsicheres Passwort aus!</b> Es erschwert jedoch sehr stark den zugriff.</p>
+									<p>Die Nutzung ist unkompliziert und einfach, da schon das Handy und eine nötige Authenticator-App ausreichen, um sich sicher mittles dem zweiten Faktor anzumelden. Die benötigte Zeit für die Anmeldung wird nur um ein paar Sekunden herausgezögert, da das Zeitpasswort in der Regel nur aus 6 Ziffern besteht.</p>			
 								</div>
 							</div>
 						</div>
@@ -214,7 +217,7 @@
 							</h2>
 							<div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 								<div class="accordion-body">
-									<p>Für diesen Fall gibt es vom Dienst bei der Einrichtung 10 Einmalpasswörter, die sehr lang sind und nur einmal verwendet werden können. Diese Passwörter werden dann wie das Zeitpasswort eingegeben und sind daraufhin ungültig. Sollte man aber das Handy verlieren und nicht mehr die Einmalpasswörter besitzen, weil man sie verloren hat, besteht in der Regel keine Möglichkeit mehr der Anmeldung. Die Dienst können den zweiten Faktor aus sicherheitsgründen nicht mehr zurücksetzen. Sollte ein Dienst das Trozdem anbieten, muss ein sehr umfangreicher Nachweis erbracht werden, dass man der Besitzer ist.</p>
+									<p>Für diesen Fall gibt es vom Dienst bei der Einrichtung 10 Einmalpasswörter, die sehr lang sind und je nur einmal verwendet werden können. Diese Passwörter werden dann wie das Zeitpasswort eingegeben und sind daraufhin ungültig. Sollte man aber das Handy verlieren und nicht mehr die Einmalpasswörter besitzen, weil man sie verloren hat, besteht in der Regel keine Möglichkeit mehr der Anmeldung. Die Dienst können den zweiten Faktor aus sicherheitsgründen nicht mehr zurücksetzen. Sollte ein Dienst das trotzdem anbieten, muss ein sehr umfangreicher Nachweis erbracht werden, dass man der Besitzer ist.</p>
 								</div>
 							</div>
 						</div>
