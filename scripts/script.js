@@ -42,10 +42,10 @@ function getCheck(id) {
 }
 
 async function loadWordlist() {
-    const response = await fetch("../words.txt");
+    const response = await fetch("./words.txt");
     globalThis.wordlist = await response.text();
 
-    const response2 = await fetch("../passwordlist.txt");
+    const response2 = await fetch("./passwordlist.txt");
     globalThis.rockyou = await response2.text()
 }
 // Rufe die Funktion beim Laden der Seite auf
